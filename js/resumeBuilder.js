@@ -53,13 +53,15 @@ var work = {
 			"employer": "hmsolutionz",
 			"title": "junior Developer",
 			"dates": "2014 - Present",
+			"location": "Reading",
 			"description": "In my job role I worked as a junior Developer",
 		},
 		{
 			"employer": "2020 claims",
 			"title": "director",
 			"dates": "2012 - 2014",
-			"description": "Whilst studying I set up this business which I ran",
+			"location": "Reading",
+			"description": "I started up my own business along side doing my studies",
 		}	
 	]
 }
@@ -82,31 +84,35 @@ var projects = {
 }
 
 var formattedName = HTMLheaderName.replace("%data%", bio.fullname);
-$("#header").append(formattedName);
+$("#header").prepend(formattedName);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-$("#header").append(formattedRole);
+$("#header").prepend(formattedRole);
 
-var formattedPic = HTMLbioPic.replace("%data%", bio.bioPic);
+var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+$("#header").append(formattedWelcome);
+
+var HTMLbioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+//$("#header").prepend(bio.bioPic);
 
 
 
 var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-$("#header").append(formattedMobile);
+$("#topContacts").append(formattedMobile);
 
 var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-$("#header").append(formattedEmail);
+$("#topContacts").append(formattedEmail);
 
 var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-$("#header").append(formattedTwitter);
+//$("#topContacts").append(formattedTwitter);
 
 var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-$("#header").append(formattedGithub);
+$("#topContacts").append(formattedGithub);
 
 var formattedBlog = HTMLblog.replace("%data%", bio.contacts.blog);
-$("#header").append(formattedBlog);
+//$("#topContacts").append(formattedBlog);
 
 var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-$("#header").append(formattedLocation);
+$("#topContacts").append(formattedLocation);
 
 if(bio.skills.length > 0) {
 	$("#header").append(HTMLskillsStart);
@@ -127,11 +133,17 @@ for (var job in work.jobs) {
     $("#workExperience").append(HTMLworkStart);
 
     var formattedEmployer= HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-    var formattedTitle = HTMLworkTitle.replace("%data%",work.jobs[job].title);
-
+    var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
     var formattedEmployerTitle = formattedEmployer + formattedTitle;
-
     $(".work-entry:last").append(formattedEmployerTitle);
+
+    var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+    $(".work-entry:last").append(formattedDates);
+    var formattedworkLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+    $(".work-entry:last").append(formattedworkLocation);
+    var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+    $(".work-entry:last").append(formattedDescription);
+    
 }
 
 
