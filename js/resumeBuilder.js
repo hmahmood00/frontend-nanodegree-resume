@@ -83,10 +83,11 @@ var projects = {
 	]
 }
 
-var formattedName = HTMLheaderName.replace("%data%", bio.fullname);
-$("#header").prepend(formattedName);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 $("#header").prepend(formattedRole);
+var formattedName = HTMLheaderName.replace("%data%", bio.fullname);
+$("#header").prepend(formattedName);
+
 
 var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 $("#header").append(formattedWelcome);
