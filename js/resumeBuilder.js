@@ -179,7 +179,7 @@ projects.display = function() {
 projects.display();
 
 education.display = function() {
-	for (school in schools.education) {
+	for (var school in education.schools) {
 
     	$("#education").append(HTMLschoolStart);
 
