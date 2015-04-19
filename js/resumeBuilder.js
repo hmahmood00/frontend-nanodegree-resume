@@ -12,7 +12,7 @@ var bio = {
 	},
 	"welcomeMessage" : "Welcome to Haseebs Profile",
 	"skills" : ["awesomeness", "programming", "webdeveloper", "student"],
-	"bioPic" : "frontend-nanodegree-resume/images/me.jpg"
+	"bioPic" : "images/me.jpg"
 }
 
 //bio.city = "Reading";
@@ -93,7 +93,7 @@ var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 $("#header").append(formattedWelcome);
 
 var HTMLbioPic = HTMLbioPic.replace("%data%", bio.bioPic);
-$("#header").append(bio.bioPic);
+$("#header").append(HTMLbioPic);
 
 
 
