@@ -70,13 +70,13 @@ var projects = {
 	"projects" : [
 	{
 		"title": "project 1",
-		"dates": "date",
+		"dates": "April 13, 2015",
 		"description": "project description",
 		"images": ["project image urls", "url 2"]
 	},
 	{
-		"title": "project 2",
-		"dates": "date",
+		"title": "May 11, 2015",
+		"dates": "",
 		"description": "project description",
 		"images": ["project image urls", "url 2"]
 	}
@@ -177,6 +177,37 @@ projects.display = function() {
 }
 
 projects.display();
+
+education.display = function() {
+	for (school in schools.education) {
+
+    	$("#education").append(HTMLschoolStart);
+
+    	var formattedName= HTMLschoolName.replace("%data%", education.schools[school].name);
+    	var formattedCity = HTMLworkTitle.replace("%data%", education.schools[school].city);
+    	var formattedEducationTitle = formattedName + formattedCity;
+    	$(".education-entry:last").append(formattedEducationTitle);
+
+    	var formattedDates = HTMLworkDates.replace("%data%", education.schools[school].dates);
+    	$(".education-entry:last").append(formattedDates);
+    	var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
+    	$(".education-entry:last").append(formattedMajor);
+        var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+        $(".education-entry:last").append(formattedworkDegree);
+        $("#education").append(HTMLonlineClasses);
+		var formattedTitle = HTMLonlineTitle.replace("%data%", education.[onlinecourses].title);
+		$(".education-entry:last").append(formattedTitle);
+		var formattedSchool= HTMLonlineSchool.replace("%data%", education.[onlinecourses].school);
+		$(".education-entry:last").append(formattedSchool);
+		var formattedDates = HTMLonlineDates.replace("%data%", education.[onlinecourses].dates);
+		$(".education-entry:last").append(formattedDates);
+		var formattedURL = HTMLonlineURL.replace("%data%", education.[onlinecourses].url);
+		$(".education-entry:last").append(formattedURL);
+	}
+}
+
+education.display();
+
 
 function locationizer(work_obj) {
     var locationArray=[];
