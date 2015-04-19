@@ -176,6 +176,7 @@ projects.display = function() {
 	}
 }
 
+projects.display();
 
 function locationizer(work_obj) {
     var locationArray=[];
@@ -199,6 +200,10 @@ function inName(name) {
 }
 
 $('#main' ).append(internationalizeButton);
+
+$("#mapDiv").append(googleMap); //see a map
+
+
   
 
 
