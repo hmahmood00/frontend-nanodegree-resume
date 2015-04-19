@@ -72,13 +72,13 @@ var projects = {
 		"title": "project 1",
 		"dates": "April 13, 2015",
 		"description": "project 1 description",
-		"images": ["project image urls", "url 2"]
+		"images": ["images/fry.jpg", "images/fry.jpg"]
 	},
 	{
 		"title": "project 2",
 		"dates": "May 11, 2015",
 		"description": "project 2 description",
-		"images": ["project image urls", "url 2"]
+		"images": ["images/fry.jpg", "images/fry.jpg"]
 	}
 	]
 }
