@@ -75,16 +75,16 @@ var work = {
 var projects = {
 	"projects" : [
 	{
-		"title": "project 1",
-		"dates": "April 13, 2015",
-		"description": "project 1 description",
-		"images": ["images/fry.jpg", "images/fry.jpg"]
+		"title": "Project 1 - Intro to Html",
+		"dates": "March 16, 2015",
+		"description": "You will get acquainted with your text editor, creating and editing simple HTML and CSS files to create your very first webpage!",
+		"images": ["images/Helloworld.jpg"]
 	},
 	{
-		"title": "project 2",
-		"dates": "May 11, 2015",
-		"description": "project 2 description",
-		"images": ["images/fry.jpg", "images/fry.jpg"]
+		"title": "Project P1: Build a Portfolio Site",
+		"dates": "April 13, 2015",
+		"description": "You will be provided with a design mockup as a PDF-file and must replicate that design in HTML and CSS. You will develop a responsive website that will display images, descriptions and links to each of the portfolio projects you will complete throughout the course of the Front-End Web Developer Nanodegree.",
+		"images": ["images/project1.jpg", "images/project1.jpg"]
 	}
 	]
 }
