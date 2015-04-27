@@ -30,7 +30,7 @@ var education = {
 		},
 		{
 			"name": "zeons academy",
-			"city": "wokingham",
+			"city": "Wokingham",
 			"degree": "IT apprenticeship",
 			"major" : ["desktop engineer, networking, support"],
 			"dates": "2010",
@@ -180,6 +180,7 @@ education.display = function() {
 	$(".education-entry:last").append(formattedDates);
 	var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
 	$(".education-entry:last").append(formattedMajor);    
+	
 }
 $("#education").append(HTMLonlineClasses);
 

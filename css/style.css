@@ -11,7 +11,9 @@
 .education-entry, .work-entry, .project-entry {
   padding-left: 5%;
   padding-right: 5%;
+  background-color: #484848;
 }
+
 
 h1 {
   font-size: 40px;
@@ -32,7 +34,7 @@ h2 {
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #CC9900;
+  color: #FFFFFF;
   line-height: 22px;
 }
 
@@ -53,7 +55,7 @@ h2, h3, h4, h5 {
 .date-text {
   font-style: italic;
   font-size: 14px;
-  color: #999999;
+  color: #FFFFCC;
   line-height: 16px;
   float: left;
 }
@@ -61,7 +63,7 @@ h2, h3, h4, h5 {
 .location-text {
   font-style: italic;
   font-size: 14px;
-  color: #FF0000;
+  color: #FFFFFF;
   line-height: 16px;
   float: right;
 
@@ -69,12 +71,12 @@ h2, h3, h4, h5 {
 
 p {
   font-size: 14px;
-  color: #FFCC00;
+  color: #F5A623;
   line-height: 21px;
 }
 
 a {
-  color: #FF9900;
+  color: #FFFFFF;
   text-decoration: none;
   margin-top: 10px;
   display: block;
@@ -106,7 +108,7 @@ a {
 }
 
 .gray {
-  background-color: #F3F3F3;
+  background-color: #F5A623;
   padding-bottom: 10px;
   clear:both;
 }
