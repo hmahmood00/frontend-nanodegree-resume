@@ -1,38 +1,77 @@
 var bio = {
-	"fullname" : "Haseeb Mahmood",
-	"age" : 24,
-	"role" : "Web Developer",
-	"contacts" : {
-		"email" : "haseebmahmood00@gmail.com",
-		"mobile" : "07897455203",
-		"twitter" : "to be made",
-		"github" : "haseebmahmood00",
-		"blog" : "to be made",
-		"location" : "Reading, England"
+	"fullname": "Haseeb Mahmood",
+	"age": 24,
+	"role": "Web Developer",
+	"contacts": {
+		"email": "haseebmahmood00@gmail.com",
+		"mobile": "07897455203",
+		"twitter": "to be made",
+		"github": "haseebmahmood00",
+		"blog": "to be made",
+		"location": "Reading, England"
 	},
-	"welcomeMessage" : "Welcome to Haseeb's Profile",
-	"skills" : ["Web Developer", "Programming", "HTML", "CSS", "Java Script", "J Query"],
-	"bioPic" : "images/me.jpg"
+	"welcomeMessage": "Welcome to Haseeb's Profile",
+	"skills": ["Web Developer", "Programming", "HTML", "CSS", "Java Script", "J Query"],
+	"bioPic": "images/me.jpg",
+	//display function
+	"display":function(){
+		var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+	    $("#header").prepend(formattedRole);
+	    var formattedName = HTMLheaderName.replace("%data%", bio.fullname);
+	    $("#header").prepend(formattedName);
+	    var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+	    $("#header").append(formattedWelcome);
+	    var HTMLbioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+	    $("#header").append(HTMLbioPic);
+	    var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+	    $("#topContacts").append(formattedMobile);
+	    var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+	    $("#topContacts").append(formattedEmail);
+	    var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+	    //$("#topContacts").append(formattedTwitter);
+	    var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+	    $("#topContacts").append(formattedGithub);
+	    var formattedBlog = HTMLblog.replace("%data%", bio.contacts.blog);
+	    //$("#topContacts").append(formattedBlog);
+	    var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+	    $("#topContacts").append(formattedLocation);
+
+	    if(bio.skills.length > 0) {
+	        $("#header").append(HTMLskillsStart);
+	        var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+	        $("#skills").append(formattedSkill);
+	        formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
+	        $("#skills").append(formattedSkill);
+	        formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
+	        $("#skills").append(formattedSkill);
+	        formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
+	        $("#skills").append(formattedSkill);
+	        formattedSkill = HTMLskills.replace("%data%", bio.skills[4]);
+	        $("#skills").append(formattedSkill);
+	        formattedSkill = HTMLskills.replace("%data%", bio.skills[5]);
+	        $("#skills").append(formattedSkill);
+    	}
+	}
 };
 
-//bio.city = "Reading";
-//bio.postcode = "RG5 4LD";
+bio.display();
+
 	
 var education = {
-	"schools" : [
+	"schools": [
 		{
 			"name": "Bucks New University",
-			"city": "High Wycombe",
+			"location": "High Wycombe",
 			"degree": "BSC Hons",
-			"major" : ["Computing"],
+			"major": ["Computing"],
 			"dates": "2010-2013",
 			"url": "www.bucks.ac.uk/"
 		},
 		{
 			"name": "zeons academy",
-			"city": "Wokingham",
+			"location": "Wokingham",
 			"degree": "IT apprenticeship",
-			"major" : ["desktop engineer, networking, support"],
+			"major": ["desktop engineer, networking, support"],
 			"dates": "2010",
 			"url": "zenosacademy.co.uk"
 		}
@@ -70,6 +109,7 @@ var work = {
 			"description": "I started up my own business along side doing my studies",
 		}	
 	]
+
 };
 
 var projects = {
@@ -89,42 +129,8 @@ var projects = {
 	]
 };
 
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-$("#header").prepend(formattedRole);
-var formattedName = HTMLheaderName.replace("%data%", bio.fullname);
-$("#header").prepend(formattedName);
-var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-$("#header").append(formattedWelcome);
-var HTMLbioPic = HTMLbioPic.replace("%data%", bio.bioPic);
-$("#header").append(HTMLbioPic);
-var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-$("#topContacts").append(formattedMobile);
-var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-$("#topContacts").append(formattedEmail);
-var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-//$("#topContacts").append(formattedTwitter);
-var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-$("#topContacts").append(formattedGithub);
-var formattedBlog = HTMLblog.replace("%data%", bio.contacts.blog);
-//$("#topContacts").append(formattedBlog);
-var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-$("#topContacts").append(formattedLocation);
 
-if(bio.skills.length > 0) {
-	$("#header").append(HTMLskillsStart);
-	var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
-	$("#skills").append(formattedSkill);
-	formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
-	$("#skills").append(formattedSkill);
-	formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
-	$("#skills").append(formattedSkill);
-	formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
-	$("#skills").append(formattedSkill);
-	formattedSkill = HTMLskills.replace("%data%", bio.skills[4]);
-	$("#skills").append(formattedSkill);
-	formattedSkill = HTMLskills.replace("%data%", bio.skills[5]);
-	$("#skills").append(formattedSkill);
-}
+
 
 //function displayWork
 work.display = function() {
@@ -170,7 +176,7 @@ education.display = function() {
 	for (var school in education.schools) {
     	$("#education").append(HTMLschoolStart);
 	var formattedName= HTMLschoolName.replace("%data%", education.schools[school].name);
-	var formattedCity = HTMLschoolLocation.replace("%data%", education.schools[school].city);
+	var formattedCity = HTMLschoolLocation.replace("%data%", education.schools[school].location);
 	var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
 	var formattedEducationTitle = formattedName + formattedDegree + formattedCity;
 	$(".education-entry:last").append(formattedEducationTitle);
