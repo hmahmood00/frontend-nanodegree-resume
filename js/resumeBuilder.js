@@ -102,7 +102,9 @@ var education = {
 		$(".education-entry:last").append(formattedDates);
 		var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
 		$(".education-entry:last").append(formattedMajor);
-		$("#education").append(HTMLonlineClasses);
+	}
+		
+	$("#education").append(HTMLonlineClasses);
 
 		for (var course in education.onlineCourses) {
 		$("#education").append(HTMLonlineStart);	
@@ -114,7 +116,6 @@ var education = {
 		var formattedURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
 		$(".education-entry:last").append(formattedURL);
 	}
-}
 }
 };
 
